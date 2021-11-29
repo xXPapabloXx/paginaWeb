@@ -1,0 +1,65 @@
+
+
+
+.misvisval{
+  width:100%;
+  text-align: center;
+  color:rgb(36, 36, 36);
+  overflow: hidden;
+}
+
+.misvisval p{
+  font-size: 130%;
+  width: 76%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.headtittle{
+  font-family: Book Antiqua;
+  font-size: 300%;
+  margin:0;
+  padding-bottom: 2%;
+  color: black;
+  text-align: center;
+}
+
+.mision, .vision, .valores{
+  padding: 3% 0%;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+
+
+table{
+  width: 90%;
+  margin: auto;  
+  text-align: justify;
+  padding: 0;  
+}
+.par{
+  width: 80%;
+  margin-left: 0;  
+}
+.par p{
+  width: 100%;
+}
+
+
+.ttl{
+  width: 20%;
+  vertical-align: top;
+  text-align: right;
+  
+}
+
+.ttl p{
+  width: 95%;
+}
+
+
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Apoyo Logístico</title>
+    <link rel="stylesheet" href="Estilos/inicio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="aos.js"></script>
+    <link href="aos.css" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+    <header data-aos="fade-down">
+        <img src="Imgs/Logo_1.png"/>          
+        <h1>Apoyo Logístico</h1> 
+    </header>
+    
+    <div id = "headerlist" data-aos="fade-left">
+        <ul> 
+            <li><a href="Web/info.html">Quienes somos</a></li>    
+            <li><a href="Web/contacto.html">Contacto</a></li>
+            <li><a href="Web/serv.html">Servicios</a></li>                       
+            <li><a href="index.html">Inicio</a></li>         
+        </ul> 
+    </div> 
+
+    
+    <!-------------slider---------------->
+    <div class="slider"data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-anchor-placement="top-bottom">
+        <div class="container">
+
+            <div class="izq" onclick="flechas(-1)">
+                <p>&#60;</p>
+            </div>
+            <div class="der" onclick="flechas(1)">
+                <p>&#62;</p>
+            </div>
+            
+            <div class="mySlides" style="display: block;">
+            <img src="Imgs/inicio/Carrusel/1.jpg" style="width:100%" class="images">
+            </div>
+            
+            
+            <div class="mySlides" style="display: none;">
+            <img src="Imgs/inicio/Carrusel/2.jpg" style="width:100%" class="images">
+            </div>
+            
+            
+            <div class="mySlides" style="display: none;">
+            <img src="Imgs/inicio/Carrusel/3.jpg" style="width:100%" class="images">
+            </div>
+            
+            
+            <div class="mySlides" style="display: none;">
+            <img src="Imgs/inicio/Carrusel/4.jpg" style="width:100%" class="images">
+            </div>        
+        </div>
+    
+
+        <div style="text-align:center" id = "dot">
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+    <script>
+        var slideIndex = 0;
+        var timer;
+        showSlides(slideIndex);        
+        
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(slideIndex);
+        }
+        function flechas(m){
+            showSlides(slideIndex += m);
+        }        
+
+        function showSlides(n) {
+            clearInterval(timer);
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length-1){
+                slideIndex = 0;
+            }
+
+            if(slideIndex < 0){
+                slideIndex = slides.length-1;
+            }
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }            
+
+            slides[slideIndex].style.display = "block"; 
+            dots[slideIndex].className += " active"; 
+            timer = setInterval(function(){flechas(1)}, 3000);
+            
+        }
+    </script> 
+    
+    <!-------------info---------------->
+
+    <div class="info" data-aos="zoom-in-down">
+        <h1 class="headtittlemid">Un poco sobre nosotros</h1>
+        <h2>TRABAJO EFICIENTE Y TRANSPARENTE</h2>
+        <p>Desde que abrimos nuestras puertas, hemos colaborado con diversos clientes. Un buen servicio empieza y termina
+        <br>con profesionales expertos y amigables, por ello nuestro proceso de contratación es riguroso para lograrlo.
+        <br>Concluimos proyectos de manera eficiente y eficaz. Siempre vamos más allá de nuestros límites para forjar
+        <br>relaciones duraderas con los clientes.</p>
+    </div>
+
+    <!-------------Imagen---------------->
+    <div class="slider" data-aos="fade-left">
+        <div class="container">            
+            <div class="mySlides1" style="display: block;">
+            <img src="Imgs/inicio/Carrusel/5.jpg" style="width:100%" class="imagenfondo">
+            </div>   
+        </div>        
+    </div>
+
+    <!-------------footer---------------->
+    <footer>
+        <p>&#169;2021. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        AOS.init({duration: 800});
+    </script>
+</body>
+</html>

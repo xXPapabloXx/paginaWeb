@@ -1,0 +1,59 @@
+
+/*tels*/
+
+.tel{
+  font-family: Book Antiqua;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.titu{
+  font-size: 300%;
+  font-weight: 300;
+}
+
+.num{
+  width: 50%;
+  float: left;
+  font-size: 150%;
+  font-weight: 10;
+}
+
+.num a{
+  color: black;
+  border-radius: 10px;
+  padding: 2px;
+  text-decoration: none;
+  transition: background-color 1s;
+}
+
+.num a:hover{
+  background-color: aquamarine;
+}
+
+/*-------Mapa-------*/
+
+.mapo{
+  width:100%;   
+  display: block;
+}
+
+#mapa{
+  font-family: Book Antiqua;
+  text-align: center;
+  font-size: 300%;
+  font-weight: 300;
+}
+
+.mapouter{
+  position:relative;
+  text-align:right;
+  width:100%;  
+}
+.gmap_canvas{
+  overflow:hidden;    
+}
+
+
+
